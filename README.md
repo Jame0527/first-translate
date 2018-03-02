@@ -27,8 +27,8 @@ prettier cli
    >需要注意的是 --write 和 --debug-check 不能一块执行
    ##### --find-config-path and --config
    >--config 意思就是给*.{xxxxx}文件找了个媳妇 但是只有它自己知道 相反--find-config-path 就是让其他人知道*.{xxxxx}文件的媳妇是谁 
-   >prettier --config ./my/.prettierrc --write ./my/file.js
-   >prettier --find-config-path ./my/file.js
+   > prettier --config ./my/.prettierrc --write ./my/file.js
+   > prettier --find-config-path ./my/file.js
         ./my/.prettierrc
    ##### --ignore-path
     都有些见不得人的东西 git可以通过.gitignore忽略不上传的文件 prettier也一样 也可以通过--ignore-path 去指定哪些文件见不得人（跳过格式化） 但是正常人的做法是跟git一样根目录新建.prettierignore文件
