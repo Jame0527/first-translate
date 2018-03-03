@@ -56,7 +56,7 @@ prettier cli
    ##### --no-editorconfig
 
    ##### --with-node-modules
-   忽略node_modules文件夹
+    忽略node_modules文件夹
    ##### --write
     和eslit --fix相同 意思就是按照规定的格式对文件进行重写
  
