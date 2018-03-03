@@ -48,9 +48,11 @@ prettier cli
    ##### --config-precedence
     设置prettier 以哪种方式进行format  
    > cli-override(默认prettier cli的形式format文件)
+   >
      例如：通过config 指定了.prettierrc配置文件 但是运行的时候命令行中添加了options的cli的指令 prettier会忽略.prettierrc配置文件 按照cli指令去format文件
    > file-override 
      配置文件权重高于cli指令 
+   >   
    > prefer-override 
      会优先查找.prettierrc配置文件 查找不到在执行cli指令
    ##### --no-editorconfig
