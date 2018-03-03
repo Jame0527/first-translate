@@ -1,6 +1,6 @@
 # prettier 中文文档 
 ## 尝试去写一些文档的翻译 但是英语水平也是有点low 有什么不足之处 多多指教
-## 不去介绍prettier 应该都知道是干什么的  只要试着去翻译下cli 跟api
+## 不去介绍prettier 应该都知道是干什么的  只要试着去翻译下cli 
 install
 =====================================
 ### prettier 同时支持yarn 和 npm
@@ -61,7 +61,37 @@ prettier cli
     忽略node_modules文件夹
    ##### --write
     和eslit --fix相同 意思就是按照规定的格式对文件进行重写
+   ##### --loglevel
+    不想翻译这个东西
+
+prettier options（高版本中配置文件已经由cli代替 测试是1.7.0版本已经不生效了）
+=====================================================
+   ##### Print Width 
+   换行的长度 在配置文件中要遵循驼峰命名法 如果你format makedown的文件不想换行 可以使用Prose Wrap禁止
+   > 默认是 80 cli设定方式： --print-width <int> 或者调用api printWith:<init>
+   ##### Tab Width
+    每次写代码都纠结于两个空格还是4个空格
+   > 默认是 2 cli设定方式： --tab-width <int> 或者调用api tabWidth:<init>
+   ##### tabs 
+   利用空行符替换空格缩进  不建议使用  默认是false cli设定： --use-tabs api：useTabs:<bool>
+   #####    Semicolons
+   要不要分号呢 true 要 false 不要 defind true cli: --no-semi  api：semi: <bool>
+   ##### Quotes
+   单引号代替双引号? defind false; cli: --single-quotes api: singleQuotos: <bool> 
+   ##### Trailing commas 
+   尾随逗号 例如 object的最后一个key-value是否要加逗号 
+   > 三个值可供挑选
+   > none 不会添加分号
+   > es5 对象 数组最后一项在换行时会添加分号 单行是不会添加的
+   > all 能加的都加上包括函数的不定参  但是需要node版本在8以上或者bable的transform (个人不建议使用)
+
+
  
+
+
+
+
+
 
 
 
