@@ -32,15 +32,34 @@ prettier cli
    > prettier --config ./my/.prettierrc --write ./my/file.js
    >
    > prettier --find-config-path ./my/file.js
-    >./my/.prettierrc
+   > console.log(./my/.prettierrc)
    ##### --ignore-path
     都有些见不得人的东西 git可以通过.gitignore忽略不上传的文件 prettier也一样 也可以通过--ignore-path 去指定哪些文件见不得人（跳过格式化） 但是正常人的做法是跟git一样根目录新建.prettierignore文件
     也可以在代码中添加prettier-ignore的注释的标识 跳过某一段代码块 具体操作可以看demo
 
    ##### --require-pragma
-    感觉这个玩意就是跟别人说：“来 干我啊” 但是可以增加代码的可读性 起码一看文件开头就知道这个文件被修理过
+    感觉这个玩意就是跟别人说：“来 干我啊” prettier 会优先处理添加了@prettier注释头的文件
+   ##### --insert-pragrma 
+    这是给--require-pragma 充当先锋的东西  可以为指定文件的头部添加@format注释头
+   ##### --list-different
+    检测哪些文件是和prettier设定的格式化配置不一样的  会打印出不一样的文件名 但是直接运行命令行只会输出不一样的文件名 但是写在script 如果只要检测到不一样的文件 会直接报错 
+   ##### --no-config
+    这个应该都明白了  忽略配置文件  直接使用prettier默认配置文件
+   ##### --config-precedence
+    设置prettier 以哪种方式进行format  
+   > cli-override(默认prettier cli的形式format文件)
+    例如：通过config 指定了.prettierrc配置文件 但是运行的时候命令行中添加了options的cli的指令 prettier会忽略.prettierrc配置文件 按照cli指令去format文件
+   > file-override 
+    配置文件权重高于cli指令 
+   > prefer-override 
+    会优先查找.prettierrc配置文件 查找不到在执行cli指令
+   ##### --no-editorconfig
 
-
+   ##### --with-node-modules
+   忽略node_modules文件夹
+   ##### --write
+    和eslit --fix相同 意思就是按照规定的格式对文件进行重写
+ 
 
 
 

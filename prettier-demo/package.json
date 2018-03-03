@@ -6,8 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "debug": "./node_modules/.bin/prettier --debug-check './src/*.js'",
-    "write": "./node_modules/.bin/prettier --write './src/*.js'",
-    "ignore":"./node_modules/.bin/prettier --ignore-path './.prettierignore'"
+    "write": "./node_modules/.bin/prettier  --write './src/*.js'",
+    "ignore": "./node_modules/.bin/prettier --ignore-path './.prettierignore'",
+    "insert": "./node_modules/.bin/prettier --insert-pragma  --write './src/*.js'",
+    "di": "./node_modules/.bin/prettier --single-quote --l ./src/*.js"
   },
   "keywords": [
     "pre"
@@ -15,6 +17,6 @@
   "author": "lw",
   "license": "ISC",
   "devDependencies": {
-    "prettier": "1.11.1"
+    "prettier": "^1.7.1"
   }
 }
