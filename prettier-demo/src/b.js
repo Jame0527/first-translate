@@ -17,5 +17,16 @@ var v = {
     x: 3,
     d: 4,
 }
+
+class HelloMessage extends React.Component {
+    render() {
+      return (
+        <div>
+          Hello {this.props.name}
+          <span>222222</span>
+        </div>
+      );
+    }
+  }
 //prettier-ignore
 let c = '2',d = '4';

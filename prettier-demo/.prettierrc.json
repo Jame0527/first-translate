@@ -2,5 +2,7 @@
     "semi": false,
     "printWidth":4,
     "tabWidth": 4,
-    "trailingComma": "es5"
+    "trailingComma": "es5",
+    "rangeStart": 4,
+    "rangeEnd": 100
 }
